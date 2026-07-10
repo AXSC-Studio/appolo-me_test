@@ -2,7 +2,7 @@
 // spec: specs/001-trip-condition-input.md § Unit Test Conditions 1,2,3
 
 import { describe, it, expect } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { TripConditionDraftProvider } from "../apps/web/src/context/TripConditionDraftContext";
