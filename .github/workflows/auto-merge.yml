@@ -1,0 +1,23 @@
+name: Auto Merge
+
+on:
+  pull_request:
+    types: [labeled, synchronize, opened, reopened]
+
+jobs:
+  auto-approve-merge:
+    name: Auto Approve and Merge (COWORK test mode)
+    runs-on: ubuntu-latest
+    if: github.actor == 'peaske' || github.actor == 'github-actions[bot]'
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Approve PR
+        uses: hmarr/auto-approve-action@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable Auto-merge
+        run: gh pr merge --auto --merge "${{ github.event.pull_request.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
