@@ -82,7 +82,7 @@ async function fillAndSubmitForm(destination: string, purposeLabel: string) {
 }
 
 const FAKE_TIMER_CONFIG = {
-  toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] as const,
+  toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] as Array<"setTimeout" | "clearTimeout" | "setInterval" | "clearInterval">,
 };
 
 // ── ❶'-1: 出張目的を入力できる ───────────────────────────────
