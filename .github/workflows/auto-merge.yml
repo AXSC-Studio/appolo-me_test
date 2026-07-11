@@ -2,7 +2,7 @@ name: Auto Merge (COWORK test mode)
 
 on:
   workflow_run:
-    workflows: ["TypeScript Check + Build + Test"]
+    workflows: ["CI"]
     types: [completed]
 
 jobs:
