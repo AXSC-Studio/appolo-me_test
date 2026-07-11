@@ -100,7 +100,7 @@ async function fillForm(destination: string, purposeLabel: string) {
 
 /** アプリ側タイマー(setTimeout/setInterval)だけfake */
 const FAKE_TIMER_CONFIG = {
-  toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] as const,
+  toFake: ["setTimeout", "clearTimeout", "setInterval", "clearInterval"] as Array<"setTimeout" | "clearTimeout" | "setInterval" | "clearInterval">,
 };
 
 // ── Step7-1: フォーム入力 → /candidates → MatchingProgress ────
