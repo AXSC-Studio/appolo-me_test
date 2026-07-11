@@ -2,7 +2,6 @@
 
 import { createContext, useContext, type ReactNode } from "react";
 import { useTripConditionDraft } from "../hooks/useTripConditionDraft";
-import type { PurposeType, TripDate } from "../types/trip-conditions";
 
 type TripConditionDraftContextValue = ReturnType<typeof useTripConditionDraft>;
 
